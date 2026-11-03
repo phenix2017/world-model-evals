@@ -1,57 +1,72 @@
 # World Model / Embodied Evaluation Benchmarks
 
-世界模型与具身智能测评基准的分组清单，按**证据成熟度**而非热度组织。
+世界模型与具身智能测评基准清单。**按 GitHub Stars 排序**，标注证据层级与许可证。
 
-## 为什么按证据分组
+Stars、许可证、最近推送时间于 **2026-11-03** 经 GitHub API 实际读取，非估算。
 
-基准是测试集；**证据层级**说的是这套测试的结果能支撑什么决定。两者不是一回事。
-所以本仓库不按 1–10 影响力排名组织，而按「这套评测最多能产出什么级别的证据」分组。
+## 榜单
 
-| 组 | 含义 | 可支撑的决定 |
-|---|---|---|
-| **Tier A** | 决策级证据（M3–M4） | 可以据此选择策略、分配资源、做发布判断 |
-| **Tier B** | 接地测量（M2） | 可以判断单项物理/能力是否正确 |
-| **Tier C** | 观感与偏好（M1–M2） | 只能判断像不像、好不好看 |
-
-## 总表
-
-| # | 项目 | 组 | 测什么 | 层级 (L) | 映射 (M) | 出身 |
-|---|---|---|---|---|---|---|
-| 1 | VBench-2.0 | C | 视频生成综合评测；新增力学/热学/材料 | L0–L3 | M1–M2 | 上海 AI Lab 等 |
-| 2 | Physics-IQ | B | 真实视频续拍，逐帧对账 | L3 | M2 | INSAIT + DeepMind |
-| 3 | WorldModelBench | C | 350 条件 / 6.7 万标注，蒸馏 2B 判官 | L1–L3 | M1–M2 | 学术联盟，NeurIPS 2025 |
-| 4 | SIMPLER | **A** | 机器人策略评测 + sim-real 相关性验证 | L5–L6 | M3–M4 | DeepMind 发起 |
-| 5 | VideoPhy-2 | B | 固体/流体/碰撞物理常识 | L2–L3 | M2 | UCLA 等 |
-| 6 | WorldScore | C | 空间一致性、可控性、动态质量 | L1–L2 | M1 | 斯坦福 |
-| 7 | LIBERO | **A** | VLA 操作任务基准 | L5 | M3 | UT Austin 等 |
-| 8 | RoboArena | **A** | 分布式真机 A/B 排名 | L6 | M4 | 多机构社区 |
-| 9 | PhyGenBench | B | 215 条物理现象提示词，四科 | L3 | M2 | 学术团队 |
-| 10 | Morpheus | B | 从视频反推动量/能量守恒误差 | L3 | M2 | 开源实现 |
+| 项目 | 分组 | Stars | 许可证 | 层级 (L) | 映射 (M) |
+|---|---|---:|---|---|---|
+| ManiSkill | 仿真基准平台 | **3,480** | Apache-2.0 | 平台 | 供 A/B 组用 |
+| LIBERO | 具身策略评测 | **2,509** | MIT | L5 | M3 |
+| RoboCasa | 仿真基准平台 | **1,861** | NOASSERTION | 平台 | 供 A/B 组用 |
+| VBench / VBench-2.0 | 视频世界模型评测 | **1,836** | Apache-2.0 | L0–L3 | M1–M2 |
+| RLBench | 仿真基准平台 | **1,835** | NOASSERTION | 平台 | 供 A/B 组用 |
+| BEHAVIOR-1K | 仿真基准平台 | **1,790** | MIT | 平台 | 供 A/B 组用 |
+| SIMPLER / SimplerEnv | 具身策略评测 | **1,181** | MIT | L5–L6 | M3–M4 |
+| Physics-IQ | 视频世界模型评测 | **387** | NOASSERTION | L3 | M2 |
+| WorldScore | 视频世界模型评测 | **320** | MIT | L1–L2 | M1 |
+| VideoPhy | 视频世界模型评测 | **213** | MIT | L2–L3 | M2 |
+| iVideoGPT | 视频世界模型评测 | **187** | 见仓库 | L1–L2 | M1 |
+| PhyGenBench | 视频世界模型评测 | **169** | 无 LICENSE | L3 | M2 |
+| WorldModelBench | 视频世界模型评测 | **51** | 无 LICENSE | L1–L3 | M1–M2 |
+| Morpheus | 视频世界模型评测 | **未核实** | 未知 | L3 | M2 |
+| RoboArena | 具身策略评测 | **未核实** | 未知 | L6 | M4 |
 
 ## 三个结论
 
-1. **10 个里有 7 个停在 M1–M2。** 视频侧的评测再密集，也仍在「产物诊断」层。
-2. **只有机器人侧摸到 M3–M4**（SIMPLER、LIBERO、RoboArena）。成熟度来自真机经验验证，不来自渲染质量。
-3. **没有一个到达 M5。** 没有第三方认证，没有把验收门限写进合同，也没有签字担责。
+1. **视频侧全部停在 M1–M2。** 评测再密集，仍属「产物诊断」层。
+2. **只有机器人侧摸到 M3–M4**（LIBERO、SimplerEnv）。成熟度来自真机经验验证，不来自渲染质量。
+3. **没有一个到达 M5。** 无第三方认证、无合同验收门限、无签字担责。
+
+## 按证据分组
+
+| Tier | 含义 | 项目 |
+|---|---|---|
+| **A** | 决策级证据 M3–M4 | LIBERO、SimplerEnv |
+| **B** | 接地测量 M2 | Physics-IQ、VideoPhy、PhyGenBench、Morpheus |
+| **C** | 观感与偏好 M1–M2 | VBench、WorldScore、WorldModelBench、iVideoGPT |
+| **平台** | 供 A/B 组使用的仿真环境 | ManiSkill、RoboCasa、RLBench、BEHAVIOR-1K |
 
 ## 使用前必须修正的三点
 
-- **不要把「视频生成评测」等同于「世界模型评测」。** 本仓库前七项测的是渲染器的物理可信度，不是世界模型的预测可用性。
-- **层级是条件性的，不是基准的固有属性。** 「LIBERO = L5」只有在配合独立复现与真机验证时成立。
-- **影响力排名需要引用数据。** 本仓库不提供排名，因为缺少可核对的引用量与统计口径。
+- **视频生成评测 ≠ 世界模型评测。** 前者测渲染器的物理可信度，不是世界模型的预测可用性。
+- **层级是条件性的。** 「LIBERO = L5」需配合独立复现与真机验证才成立。
+- **Star 不等于证据强度。** ManiSkill 有 3.5k stars，但它是仿真平台，不直接产出决策级证据。
+
+## 许可证风险
+
+- `PhyGenBench`、`WorldModelBench` **无 LICENSE 文件** — 商用前必须确认授权。
+- `Physics-IQ`、`RoboCasa`、`RLBench` 为 `NOASSERTION` — 需人工阅读条款。
+- 其余为 MIT 或 Apache-2.0。
 
 ## 目录
 
 ```
-docs/ladder-mapping.md    L0–L7 与 M1–M5 的对应关系
-data/evals.csv            机器可读清单
-evals/video-world/        视频世界模型评测
-evals/embodied/           具身策略评测
+data/evals.csv              机器可读清单
+docs/ladder-mapping.md      L0–L7 ↔ M1–M5 映射
+evals/video-world/          视频世界模型评测（8）
+evals/embodied-policy/      具身策略评测（3）
+evals/embodied-sim/         仿真基准平台（4）
 ```
 
-## 来源与状态
+## 未纳入
 
-- 清单来源：用户提供的整理；层级映射依据 Muse 报告
-  《同一个尺子量三件事：航天 V&V · 大语言模型 · 世界模型》。
-- **状态：未逐项核实。** 官方链接、维护状态、许可证、引用量均为 TODO。
-- 引用本清单用于外部材料前，请先完成 `data/evals.csv` 中的 `verified` 字段。
+`RoboArena`、`Morpheus` 未找到可确认的公开仓库，故标注待核实而非猜测链接。
+自动驾驶世界模型评测（DriveArena 类）、WorldArena 等未纳入本轮，需单独界定范围。
+
+## 来源
+
+层级映射依据 Muse 报告《同一个尺子量三件事：航天 V&V · 大语言模型 · 世界模型》。
+M1–M5 是该报告的分析框架，不是已确立的行业标准。

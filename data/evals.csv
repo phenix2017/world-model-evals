@@ -1,11 +1,16 @@
-rank,name,group,tier,measures,level_L,level_M,origin,verified
-1,VBench-2.0,video-world,C,视频生成综合评测；2.0 版新增力学、热学、材料等物理维度,L0–L3,M1–M2,上海 AI Lab 等（GitHub 全开源，待核实）,no
-2,Physics-IQ,video-world,B,给定真实视频开头，模型续拍，与真实续帧逐帧比对,L3,M2,INSAIT + DeepMind（数据与代码开源，待核实）,no
-3,WorldModelBench,video-world,C,350 个条件 / 6.7 万条人类标注；蒸馏 2B 开源判官模型自动打分,L1–L3,M1–M2,学术联盟，NeurIPS 2025（待核实）,no
-4,VideoPhy-2,video-world,B,物理常识：固体、流体、碰撞的常识合理性,L2–L3,M2,UCLA 等（待核实）,no
-5,WorldScore,video-world,C,生成世界的空间一致性、可控性、动态质量（偏 3D 世界生成）,L1–L2,M1,斯坦福（李飞飞团队一脉，待核实）,no
-6,PhyGenBench,video-world,B,215 条物理现象提示词：力学、光学、热学、材料四科,L3,M2,学术团队开源（待核实）,no
-7,Morpheus,video-world,B,直接从生成视频反推动量/能量守恒误差打分,L3,M2,方法独特，开源实现（待核实）,no
-8,SIMPLER (SimplerEnv),embodied,A,机器人策略评测；核心价值是 sim 与真机成绩相关性验证方法,L5–L6,M3–M4,DeepMind 发起，社区维护,no
-9,LIBERO,embodied,A,VLA 机器人策略操作任务基准；具身圈引用量最大的策略题库之一,L5,M3,UT Austin 等（全开源）,no
-10,RoboArena,embodied,A,全球分布式真机 A/B 对比排名，不依赖仿真,L6,M4,多机构社区共营（代码开源）,no
+name,group,stars,license,last_push,url,level_L,level_M,stars_verified
+VBench / VBench-2.0,video-world,1836,Apache-2.0,2026-08-21,https://github.com/Vchitect/VBench,L0–L3,M1–M2,yes
+Physics-IQ,video-world,387,NOASSERTION,2026-10-20,https://github.com/google-deepmind/physics-IQ-benchmark,L3,M2,yes
+WorldScore,video-world,320,MIT,2026-07-23,https://github.com/haoyi-duan/WorldScore,L1–L2,M1,yes
+VideoPhy,video-world,213,MIT,2026-01-30,https://github.com/Hritikbansal/videophy,L2–L3,M2,yes
+iVideoGPT,video-world,187,见仓库,2026,https://github.com/thuml/iVideoGPT,L1–L2,M1,yes
+PhyGenBench,video-world,169,无 LICENSE,2024-10-25,https://github.com/OpenGVLab/PhyGenBench,L3,M2,yes
+WorldModelBench,video-world,51,无 LICENSE,2025-07-29,https://github.com/WorldModelBench-Team/WorldModelBench,L1–L3,M1–M2,yes
+Morpheus,video-world,,未知,—,待核实,L3,M2,no
+LIBERO,embodied-policy,2509,MIT,2025-03-15,https://github.com/Lifelong-Robot-Learning/LIBERO,L5,M3,yes
+SIMPLER / SimplerEnv,embodied-policy,1181,MIT,2026-09-30,https://github.com/simpler-env/SimplerEnv,L5–L6,M3–M4,yes
+RoboArena,embodied-policy,,未知,—,待核实,L6,M4,no
+ManiSkill,embodied-sim,3480,Apache-2.0,2026-08-04,https://github.com/mani-skill/ManiSkill,平台,供 A/B 组用,yes
+RoboCasa,embodied-sim,1861,NOASSERTION,2026-10-30,https://github.com/robocasa/robocasa,平台,供 A/B 组用,yes
+RLBench,embodied-sim,1835,NOASSERTION,2025-01-25,https://github.com/stepjam/RLBench,平台,供 A/B 组用,yes
+BEHAVIOR-1K,embodied-sim,1790,MIT,2026-11-02,https://github.com/StanfordVL/BEHAVIOR-1K,平台,供 A/B 组用,yes
