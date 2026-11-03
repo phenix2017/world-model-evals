@@ -1,70 +1,140 @@
 # World Model / Embodied Evaluation Benchmarks
 
-世界模型与具身智能测评基准清单。**按 GitHub Stars 排序**，标注证据层级与许可证。
+世界模型与具身智能的**评测方法**清单 — 不是模型清单，是「怎么测」的清单。
 
-Stars、许可证、最近推送时间于 **2026-11-03** 经 GitHub API 实际读取，非估算。
+按 GitHub Stars 排序，标注证据层级（L0–L7 → M1–M5）与许可证。
+数据于 <!-- BEGIN:STAMP -->
+2026-11-03
+<!-- END:STAMP --> 由 GitHub API 自动读取，每周刷新。
 
-## 榜单
+![positioning](docs/positioning.png)
 
-| 项目 | 分组 | Stars | 许可证 | 层级 (L) | 映射 (M) |
-|---|---|---:|---|---|---|
-| ManiSkill | 仿真基准平台 | **3,480** | Apache-2.0 | 平台 | 供 A/B 组用 |
-| LIBERO | 具身策略评测 | **2,509** | MIT | L5 | M3 |
-| RoboCasa | 仿真基准平台 | **1,861** | NOASSERTION | 平台 | 供 A/B 组用 |
-| VBench / VBench-2.0 | 视频世界模型评测 | **1,836** | Apache-2.0 | L0–L3 | M1–M2 |
-| RLBench | 仿真基准平台 | **1,835** | NOASSERTION | 平台 | 供 A/B 组用 |
-| BEHAVIOR-1K | 仿真基准平台 | **1,790** | MIT | 平台 | 供 A/B 组用 |
-| SIMPLER / SimplerEnv | 具身策略评测 | **1,181** | MIT | L5–L6 | M3–M4 |
-| Physics-IQ | 视频世界模型评测 | **387** | NOASSERTION | L3 | M2 |
-| WorldScore | 视频世界模型评测 | **320** | MIT | L1–L2 | M1 |
-| VideoPhy | 视频世界模型评测 | **213** | MIT | L2–L3 | M2 |
-| iVideoGPT | 视频世界模型评测 | **187** | 见仓库 | L1–L2 | M1 |
-| PhyGenBench | 视频世界模型评测 | **169** | 无 LICENSE | L3 | M2 |
-| WorldModelBench | 视频世界模型评测 | **51** | 无 LICENSE | L1–L3 | M1–M2 |
-| Morpheus | 视频世界模型评测 | **未核实** | 未知 | L3 | M2 |
-| RoboArena | 具身策略评测 | **未核实** | 未知 | L6 | M4 |
+## 全图怎么看
+
+横轴是证据成熟度，不是"好不好"。右边更成熟 = 更能支撑决策。
+
+- **M1–M2 产物诊断** — 判断生成的东西像不像、某一项物理对不对
+- **M3–M4 决策证据** — 判断结论能否预测真实结果
+- **M5 认证问责** — 有标准、有认证、有人签字担责
+
+橙色虚线是分界：**左侧验的是"产物"，右侧验的是"决策"**。
+
+## 1. 视频世界模型 / 生成真实度（<!-- BEGIN:VIDEO_N -->
+15
+<!-- END:VIDEO_N --> 项）
+
+<!-- BEGIN:VIDEO_TABLE -->
+| 项目 | Stars | 许可证 | L | M |
+|---|---:|---|---|---|
+| VBench | **1,836** | Apache-2.0 | L0–L3 | M1–M2 |
+| GenEval | **486** | MIT | L1–L2 | M1 |
+| Physics-IQ | **387** | NOASSERTION | L3 | M2 |
+| WorldScore | **320** | MIT | L1–L2 | M1 |
+| VideoScore | **294** | MIT | L1–L2 | M1 |
+| WorldArena | **273** | 无 LICENSE | L2–L3 | M2–M3 |
+| VideoPhy | **213** | MIT | L2–L3 | M2 |
+| EvalCrafter | **196** | 无 LICENSE | L1–L2 | M1 |
+| iVideoGPT | **187** | MIT | L1–L2 | M1 |
+| PhyGenBench | **169** | 无 LICENSE | L3 | M2 |
+| EWMBench | **132** | 无 LICENSE | L2–L3 | M2 |
+| T2V-CompBench | **125** | 无 LICENSE | L2 | M2 |
+| PhysBench | **93** | Apache-2.0 | L2–L3 | M2 |
+| WorldModelBench | **51** | 无 LICENSE | L1–L3 | M1–M2 |
+| Morpheus | 未核实 | 未知 | L3 | M2 |
+<!-- END:VIDEO_TABLE -->
+
+**这一组最高只到 M2。** 全部属于产物诊断层。
+
+## 2. 具身策略评测（<!-- BEGIN:POLICY_N -->
+5
+<!-- END:POLICY_N --> 项）
+
+<!-- BEGIN:POLICY_TABLE -->
+| 项目 | Stars | 许可证 | L | M |
+|---|---:|---|---|---|
+| LIBERO | **2,509** | MIT | L5 | M3 |
+| SimplerEnv | **1,181** | MIT | L5–L6 | M3–M4 |
+| VLABench | **482** | MIT | L4–L5 | M3 |
+| EmbodiedBench | **357** | 无 LICENSE | L4–L5 | M3 |
+| RoboArena | 未核实 | 未知 | L6 | M4 |
+<!-- END:POLICY_TABLE -->
+
+**唯一进入 M3–M4 的组。** 差别在于它们把仿真分数和真机结果做了相关性验证。
+
+## 3. 仿真基准平台（<!-- BEGIN:SIM_N -->
+4
+<!-- END:SIM_N --> 项）
+
+<!-- BEGIN:SIM_TABLE -->
+| 项目 | Stars | 许可证 | 最近推送 |
+|---|---:|---|---|
+| ManiSkill | **3,480** | Apache-2.0 | 2026-08-04 |
+| RoboCasa | **1,861** | NOASSERTION | 2026-10-30 |
+| RLBench | **1,835** | NOASSERTION | 2025-01-25 |
+| BEHAVIOR-1K | **1,790** | MIT | 2026-11-02 |
+<!-- END:SIM_TABLE -->
+
+平台本身不产出证据层级；层级取决于拿它做什么验证。
 
 ## 三个结论
 
-1. **视频侧全部停在 M1–M2。** 评测再密集，仍属「产物诊断」层。
-2. **只有机器人侧摸到 M3–M4**（LIBERO、SimplerEnv）。成熟度来自真机经验验证，不来自渲染质量。
-3. **没有一个到达 M5。** 无第三方认证、无合同验收门限、无签字担责。
+1. **视频侧 15 项，没有一个超过 M2。** 密度极高，成熟度很低。
+2. **成熟度只出现在机器人侧。** 真机经验验证才是分水岭，不是渲染质量。
+3. **全域零 M5。** 无第三方认证、无合同验收门限、无签字担责。
 
-## 按证据分组
+## 许可证风险（<!-- BEGIN:NO_LICENSE_N -->
+9
+<!-- END:NO_LICENSE_N --> 个无 LICENSE）
 
-| Tier | 含义 | 项目 |
-|---|---|---|
-| **A** | 决策级证据 M3–M4 | LIBERO、SimplerEnv |
-| **B** | 接地测量 M2 | Physics-IQ、VideoPhy、PhyGenBench、Morpheus |
-| **C** | 观感与偏好 M1–M2 | VBench、WorldScore、WorldModelBench、iVideoGPT |
-| **平台** | 供 A/B 组使用的仿真环境 | ManiSkill、RoboCasa、RLBench、BEHAVIOR-1K |
+<!-- BEGIN:NO_LICENSE -->
+`WorldArena`、`EvalCrafter`、`PhyGenBench`、`EWMBench`、`T2V-CompBench`、`WorldModelBench`、`Morpheus`、`EmbodiedBench`、`RoboArena`
+<!-- END:NO_LICENSE -->
 
-## 使用前必须修正的三点
+这些仓库没有 LICENSE 文件，默认「保留所有权利」。商用、再分发或写入交付物前必须单独取得授权。
+`Physics-IQ`、`RoboCasa`、`RLBench` 为 `NOASSERTION`，需人工阅读条款。
 
-- **视频生成评测 ≠ 世界模型评测。** 前者测渲染器的物理可信度，不是世界模型的预测可用性。
-- **层级是条件性的。** 「LIBERO = L5」需配合独立复现与真机验证才成立。
-- **Star 不等于证据强度。** ManiSkill 有 3.5k stars，但它是仿真平台，不直接产出决策级证据。
+## 持续监控
 
-## 许可证风险
+`data/benchmarks.csv` 是唯一事实源。每周一 GitHub Actions 自动运行：
 
-- `PhyGenBench`、`WorldModelBench` **无 LICENSE 文件** — 商用前必须确认授权。
-- `Physics-IQ`、`RoboCasa`、`RLBench` 为 `NOASSERTION` — 需人工阅读条款。
-- 其余为 MIT 或 Apache-2.0。
+```
+scripts/update.py
+```
+
+它拉取每个仓库的 stars、forks、open issues、最近推送、最新 release、是否归档，
+写入 `data/metrics.csv`，并重新生成本页表格与 `docs/positioning.svg`。
+
+本地手动刷新：
+
+```bash
+GITHUB_TOKEN=... python3 scripts/update.py
+```
+
+新增条目：在 `data/benchmarks.csv` 加一行（`repo` 填 `owner/name`），跑一次脚本即可。
+
+## 怎么读这张表
+
+- **L 层级**是原始定位（L0–L7），**M 层级**是压缩后的跨域尺（M1–M5）。
+- 层级说的是**证据能支撑什么决定**，不是基准写得好不好。
+- 判定是分析结论，非仓库自述；有争议时以原始论文为准。
+
+## 未纳入
+
+- `Morpheus`、`RoboArena`：未找到可确认的公开仓库，标 `PENDING` 而非猜测链接。
+- 自动驾驶世界模型评测、底层视频质量指标（FVD/LPIPS 类）、纯模型仓库：不属于「评测方法」。
 
 ## 目录
 
 ```
-data/evals.csv              机器可读清单
+data/benchmarks.csv         事实源（人工维护元数据与层级）
+data/metrics.csv            自动抓取的活跃度指标
+docs/positioning.svg        生成的全景图
 docs/ladder-mapping.md      L0–L7 ↔ M1–M5 映射
-evals/video-world/          视频世界模型评测（8）
-evals/embodied-policy/      具身策略评测（3）
-evals/embodied-sim/         仿真基准平台（4）
+scripts/update.py           抓取 + 重生成
+evals/video/                视频世界模型评测
+evals/policy/               具身策略评测
+evals/sim/                  仿真基准平台
 ```
-
-## 未纳入
-
-`RoboArena`、`Morpheus` 未找到可确认的公开仓库，故标注待核实而非猜测链接。
-自动驾驶世界模型评测（DriveArena 类）、WorldArena 等未纳入本轮，需单独界定范围。
 
 ## 来源
 

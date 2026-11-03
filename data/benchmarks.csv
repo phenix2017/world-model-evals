@@ -1,0 +1,25 @@
+name,group,repo,level_L,level_M,what
+VBench,video,Vchitect/VBench,L0–L3,M1–M2,视频生成综合评测；16 维度含物理与画面质量
+GenEval,video,djghosh13/geneval,L1–L2,M1,文生图对象级对齐（常与视频评测并列参考）
+Physics-IQ,video,google-deepmind/physics-IQ-benchmark,L3,M2,真实视频续拍逐帧对账；物理真值最硬
+WorldScore,video,haoyi-duan/WorldScore,L1–L2,M1,空间一致性、可控性、动态质量
+VideoScore,video,TIGER-AI-Lab/VideoScore,L1–L2,M1,训练自动指标模拟人类细粒度评分
+WorldArena,video,tsinghua-fib-lab/WorldArena,L2–L3,M2–M3,具身世界模型的感知+功能效用统一评测
+VideoPhy,video,Hritikbansal/videophy,L2–L3,M2,固体/流体/碰撞物理常识
+EvalCrafter,video,evalcrafter/EvalCrafter,L1–L2,M1,17 指标 + 人类偏好对齐
+iVideoGPT,video,thuml/iVideoGPT,L1–L2,M1,交互式视频世界模型（模型+评测一体）
+PhyGenBench,video,OpenGVLab/PhyGenBench,L3,M2,215 条物理现象提示词，四科
+EWMBench,video,AgibotTech/EWMBench,L2–L3,M2,具身世界模型的场景、运动、语义质量
+T2V-CompBench,video,KaiyueSun98/T2V-CompBench,L2,M2,组合性文生视频：属性、数量、空间关系
+PhysBench,video,physical-superintelligence-lab/PhysBench,L2–L3,M2,物理常识理解基准（VLM 判定）
+WorldModelBench,video,WorldModelBench-Team/WorldModelBench,L1–L3,M1–M2,350 条件 / 6.7 万标注 + 蒸馏 2B 判官
+Morpheus,video,PENDING,L3,M2,从生成视频反推动量/能量守恒误差
+LIBERO,policy,Lifelong-Robot-Learning/LIBERO,L5,M3,VLA 操作任务基准；具身圈引用最多
+SimplerEnv,policy,simpler-env/SimplerEnv,L5–L6,M3–M4,策略评测 + sim-real 相关性验证
+VLABench,policy,OpenMOSS/VLABench,L4–L5,M3,VLA / 具身智能体大规模基准
+EmbodiedBench,policy,EmbodiedBench/EmbodiedBench,L4–L5,M3,多域具身智能体综合评测（ICML 2025 Oral）
+RoboArena,policy,PENDING,L6,M4,分布式真机 A/B 排名
+ManiSkill,sim,mani-skill/ManiSkill,平台,平台,GPU 并行机器人仿真与技能基准
+RoboCasa,sim,robocasa/robocasa,平台,平台,日常任务大规模仿真
+RLBench,sim,stepjam/RLBench,平台,平台,大规模操作基准与学习环境
+BEHAVIOR-1K,sim,StanfordVL/BEHAVIOR-1K,平台,平台,具身 AI 平台与 1000 项日常任务
