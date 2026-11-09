@@ -4,7 +4,7 @@
 
 按 GitHub Stars 排序，标注证据层级（L0–L7 → M1–M5）与许可证。
 数据于 <!-- BEGIN:STAMP -->
-2026-11-03
+2026-11-09
 <!-- END:STAMP --> 由 GitHub API 自动读取，每周刷新。
 
 ![positioning](docs/positioning.png)
@@ -26,20 +26,20 @@
 <!-- BEGIN:VIDEO_TABLE -->
 | 项目 | Stars | 许可证 | L | M |
 |---|---:|---|---|---|
-| VBench | **1,836** | Apache-2.0 | L0–L3 | M1–M2 |
-| GenEval | **486** | MIT | L1–L2 | M1 |
-| Physics-IQ | **387** | NOASSERTION | L3 | M2 |
-| WorldScore | **320** | MIT | L1–L2 | M1 |
-| VideoScore | **294** | MIT | L1–L2 | M1 |
+| VBench | **1,844** | Apache-2.0 | L0–L3 | M1–M2 |
+| GenEval | **487** | MIT | L1–L2 | M1 |
+| Physics-IQ | **388** | NOASSERTION | L3 | M2 |
+| VideoScore | **377** | MIT | L1–L2 | M1 |
+| WorldScore | **321** | MIT | L1–L2 | M1 |
 | WorldArena | **273** | 无 LICENSE | L2–L3 | M2–M3 |
-| VideoPhy | **213** | MIT | L2–L3 | M2 |
-| EvalCrafter | **196** | 无 LICENSE | L1–L2 | M1 |
-| iVideoGPT | **187** | MIT | L1–L2 | M1 |
+| VideoPhy | **214** | MIT | L2–L3 | M2 |
+| EvalCrafter | **197** | 无 LICENSE | L1–L2 | M1 |
+| iVideoGPT | **189** | MIT | L1–L2 | M1 |
 | PhyGenBench | **169** | 无 LICENSE | L3 | M2 |
 | EWMBench | **132** | 无 LICENSE | L2–L3 | M2 |
 | T2V-CompBench | **125** | 无 LICENSE | L2 | M2 |
 | PhysBench | **93** | Apache-2.0 | L2–L3 | M2 |
-| WorldModelBench | **51** | 无 LICENSE | L1–L3 | M1–M2 |
+| WorldModelBench | **53** | 无 LICENSE | L1–L3 | M1–M2 |
 | Morpheus | 未核实 | 未知 | L3 | M2 |
 <!-- END:VIDEO_TABLE -->
 
@@ -52,10 +52,10 @@
 <!-- BEGIN:POLICY_TABLE -->
 | 项目 | Stars | 许可证 | L | M |
 |---|---:|---|---|---|
-| LIBERO | **2,509** | MIT | L5 | M3 |
+| LIBERO | **2,523** | MIT | L5 | M3 |
 | SimplerEnv | **1,181** | MIT | L5–L6 | M3–M4 |
 | VLABench | **482** | MIT | L4–L5 | M3 |
-| EmbodiedBench | **357** | 无 LICENSE | L4–L5 | M3 |
+| EmbodiedBench | **358** | 无 LICENSE | L4–L5 | M3 |
 | RoboArena | 未核实 | 未知 | L6 | M4 |
 <!-- END:POLICY_TABLE -->
 
@@ -68,10 +68,10 @@
 <!-- BEGIN:SIM_TABLE -->
 | 项目 | Stars | 许可证 | 最近推送 |
 |---|---:|---|---|
-| ManiSkill | **3,480** | Apache-2.0 | 2026-08-04 |
-| RoboCasa | **1,861** | NOASSERTION | 2026-10-30 |
-| RLBench | **1,835** | NOASSERTION | 2025-01-25 |
-| BEHAVIOR-1K | **1,790** | MIT | 2026-11-02 |
+| ManiSkill | **3,500** | Apache-2.0 | 2026-08-04 |
+| RoboCasa | **1,872** | NOASSERTION | 2026-10-30 |
+| RLBench | **1,838** | NOASSERTION | 2025-01-25 |
+| BEHAVIOR-1K | **1,798** | MIT | 2026-11-08 |
 <!-- END:SIM_TABLE -->
 
 平台本身不产出证据层级；层级取决于拿它做什么验证。
